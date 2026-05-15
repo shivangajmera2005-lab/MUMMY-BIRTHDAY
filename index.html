@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Maa ❤️</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Dancing+Script:wght@400;600;700&family=Lato:wght@300;400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body class="no-scroll">
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- ─── Loading Screen ─── -->
+    <div id="loading">
+        <div class="loading-heart">❤️</div>
+        <div class="loading-text">Preparing something special for you…</div>
+        <div class="loading-bar">
+            <div class="loading-bar-fill"></div>
+        </div>
+    </div>
+
+    <!-- ─── Global Particles ─── -->
+    <div id="particles-global"></div>
+
+    <!-- ════════════════════════════════
+       SECTION 1 — INTRO
+  ════════════════════════════════ -->
+    <section id="intro">
+        <canvas id="intro-canvas"></canvas>
+        <div class="intro-glow intro-glow-1"></div>
+        <div class="intro-glow intro-glow-2"></div>
+
+        <div class="intro-content">
+
+            <p class="intro-tagline">
+                "For the woman who made every<br />impossible thing feel possible…"
+            </p>
+            <h1 class="intro-title">Happy Birthday Maa ❤️</h1>
+
+            <div class="intro-btn-wrap">
+                <button class="intro-btn" id="begin-btn" onclick="beginJourney()">
+                    <span class="intro-btn-inner">✨ Tap To Begin</span>
+                    <span class="intro-btn-hint">Tap here to start your surprise ✨</span>
+                </button>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- ════════════════════════════════
+       SECTION 2 — TIMELINE
+  ════════════════════════════════ -->
+    <section id="timeline">
+        <div class="section-header">
+            <span class="section-label">Our Story</span>
+            <h2 class="section-title">Through the Years<br />with You</h2>
+        </div>
+        <div class="section-scroll-hint">
+            <span>Scroll through the memories</span>
+            <span class="arrow">↓</span>
+        </div>
+
+        <div class="timeline-wrap">
+            <div class="timeline-line"></div>
+
+            <!-- CARD 1 -->
+            <div class="timeline-card">
+                <div class="timeline-side">
+                    <div class="timeline-img-box">
+                        <img src="picture/photo_1_2026-05-15_16-32-19.jpg" alt="The Beginning">
+                    </div>
+                </div>
+                <div class="timeline-dot-wrap">
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-side timeline-body">
+                    <div class="timeline-year">Through Every Phase</div>
+                    <div class="timeline-memory">"No matter how much we grow, we still look for you first."</div>
+                    <div class="timeline-sub">From school days to today, you’ve been our comfort, our guide, and our
+                        home.<br />You stood beside us in every version of life — quietly making everything better.
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="timeline-card">
+                <div class="timeline-side">
+                    <div class="timeline-img-box">
+                        <img src="picture/photo_2_2026-05-15_16-32-19.jpg" alt="Childhood">
+                    </div>
+                </div>
+                <div class="timeline-dot-wrap">
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-side timeline-body">
+                    <div class="timeline-year">Our Little World</div>
+                    <div class="timeline-memory">"No matter how much life changes, home will always look like this."
+                    </div>
+                    <div class="timeline-sub">A picture filled with love, laughter, and the people who made every memory
+                        beautiful.</div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="timeline-card">
+                <div class="timeline-side">
+                    <div class="timeline-img-box">
+                        <img src="picture/photo_3_2026-05-15_16-32-19.jpg" alt="School Days">
+                    </div>
+                </div>
+                <div class="timeline-dot-wrap">
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-side timeline-body">
+                    <div class="timeline-year">Growing Years</div>
+                    <div class="timeline-memory">"My loudest cheerleader, my quietest strength."</div>
+                    <div class="timeline-sub">You believed in me even when I doubted myself.</div>
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="timeline-card">
+                <div class="timeline-side">
+                    <div class="timeline-img-box">
+                        <img src="picture/photo_4_2026-05-15_16-32-19.jpg" alt="Growing Up">
+                    </div>
+                </div>
+                <div class="timeline-dot-wrap">
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-side timeline-body">
+                    <div class="timeline-year">For the Piano Picture</div>
+                    <div class="timeline-memory">"Some people create music with instruments.<br />You created it in our
+                        lives."</div>
+                    <div class="timeline-sub">Your calmness, patience, and love made our house feel beautiful even on
+                        difficult days.</div>
+                </div>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="timeline-card">
+                <div class="timeline-side">
+                    <div class="timeline-img-box">
+                        <img src="picture/photo_5_2026-05-15_16-32-19.jpg" alt="Today">
+                    </div>
+                </div>
+                <div class="timeline-dot-wrap">
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-side timeline-body">
+                    <div class="timeline-year">Childhood Memories</div>
+                    <div class="timeline-memory">"From holding my tiny hands to holding together our whole world."</div>
+                    <div class="timeline-sub">You turned ordinary moments into the safest memories of my
+                        life.<br />Every smile of mine carried a piece of your love in it.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════
+       SECTION 3 — LETTERS
+  ════════════════════════════════ -->
+    <section id="letters">
+        <div class="section-header">
+            <span class="section-label">Things I Never Say Enough</span>
+            <h2 class="section-title">Letters from the Heart</h2>
+        </div>
+        <div class="section-scroll-hint" style="margin-bottom:2.5rem">
+            <span>Tap each letter ❤️</span>
+        </div>
+
+        <div class="letters-grid" id="letters-grid">
+
+            <div class="letter-card" onclick="toggleLetter(this)">
+                <div class="letter-inner">
+                    <div class="letter-front">
+                        <div class="letter-icon">✉️</div>
+                        <div class="letter-front-hint">"A letter sealed with gratitude…"</div>
+                        <div class="letter-tap-hint">↑ Tap to open</div>
+                    </div>
+                    <div class="letter-back">
+                        <div class="letter-icon">🙏</div>
+                        <div class="letter-back-text">"Thank you for believing in me even when I stopped believing in
+                            myself."</div>
+                        <div class="letter-back-sub">— With all my heart</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="letter-card" onclick="toggleLetter(this)">
+                <div class="letter-inner">
+                    <div class="letter-front">
+                        <div class="letter-icon">💌</div>
+                        <div class="letter-front-hint">"A note I always meant to write…"</div>
+                        <div class="letter-tap-hint">↑ Tap to open</div>
+                    </div>
+                    <div class="letter-back">
+                        <div class="letter-icon">💛</div>
+                        <div class="letter-back-text">"You sacrificed more than I ever noticed. I see it now. I'm sorry
+                            it took me so long."</div>
+                        <div class="letter-back-sub">— Your grateful son</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="letter-card" onclick="toggleLetter(this)">
+                <div class="letter-inner">
+                    <div class="letter-front">
+                        <div class="letter-icon">🏠</div>
+                        <div class="letter-front-hint">"Something I feel every single day…"</div>
+                        <div class="letter-tap-hint">↑ Tap to open</div>
+                    </div>
+                    <div class="letter-back">
+                        <div class="letter-icon">🌸</div>
+                        <div class="letter-back-text">"Home is not a place. Home is wherever you are."</div>
+                        <div class="letter-back-sub">— Shaan</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="letter-card" onclick="toggleLetter(this)">
+                <div class="letter-inner">
+                    <div class="letter-front">
+                        <div class="letter-icon">⭐</div>
+                        <div class="letter-front-hint">"The truth I carry every morning…"</div>
+                        <div class="letter-tap-hint">↑ Tap to open</div>
+                    </div>
+                    <div class="letter-back">
+                        <div class="letter-icon">🌅</div>
+                        <div class="letter-back-text">"Every success I've had has your fingerprints on it. Every single
+                            one."</div>
+                        <div class="letter-back-sub">— Forever proud to be your son</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="letter-card" onclick="toggleLetter(this)">
+                <div class="letter-inner">
+                    <div class="letter-front">
+                        <div class="letter-icon">🌙</div>
+                        <div class="letter-front-hint">"For the quiet nights you waited up…"</div>
+                        <div class="letter-tap-hint">↑ Tap to open</div>
+                    </div>
+                    <div class="letter-back">
+                        <div class="letter-icon">💫</div>
+                        <div class="letter-back-text">"I love you in a way I don't have words for. But I hope this
+                            helps."</div>
+                        <div class="letter-back-sub">— Your Shaan</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="letter-card" onclick="toggleLetter(this)">
+                <div class="letter-inner">
+                    <div class="letter-front">
+                        <div class="letter-icon">🎂</div>
+                        <div class="letter-front-hint">"A birthday promise…"</div>
+                        <div class="letter-tap-hint">↑ Tap to open</div>
+                    </div>
+                    <div class="letter-back">
+                        <div class="letter-icon">❤️</div>
+                        <div class="letter-back-text">"I promise to keep making you proud — and to call more often.
+                            Happy Birthday, Maa."</div>
+                        <div class="letter-back-sub">— With all my love</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════
+       SECTION 4 — VIDEO
+  ════════════════════════════════ -->
+    <section id="video-section">
+        <div class="intro-glow intro-glow-1"
+            style="animation:glowPulse 5s ease-in-out infinite;top:0;left:50%;transform:translateX(-50%)"></div>
+        <h2 class="video-title" data-reveal>A Message Just for You</h2>
+
+        <div class="video-btn-wrap" data-reveal onclick="openVideoModal()">
+            <div class="video-btn">▶</div>
+            <div class="video-btn-label">Play Message From Shaan</div>
+            <div class="video-hint">TAP TO HEAR SOMETHING SPECIAL 🎙️</div>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div id="video-modal">
+        <div class="video-modal-inner">
+            <button class="video-modal-close" onclick="closeVideoModal()">✕</button>
+            <video src="picture/video_2026-05-15_22-40-03.mp4" controls autoplay style="width: 100%; max-width: 800px; border-radius: 12px;"></video>
+        </div>
+    </div>
+
+    <!-- ════════════════════════════════
+       SECTION 5 — GALLERY
+  ════════════════════════════════ -->
+    <section id="gallery">
+        <div class="section-header">
+            <span class="section-label">Our Gallery</span>
+            <h2 class="section-title">Memories We've Made</h2>
+        </div>
+        <div class="section-scroll-hint" style="margin-bottom:2rem">
+            <span>Touch the memories 📸</span>
+        </div>
+
+        <div class="gallery-grid">
+            <!-- To add photos: inside each .polaroid-img, replace the ph-icon/ph-text divs with <img src="photo.jpg" alt="caption"> -->
+            <div class="polaroid" style="--rot:-2.5deg">
+                <div class="polaroid-img">
+                    <img src="picture/photo_6_2026-05-15_16-32-19.jpg" alt="Together, always">
+                </div>
+                <div class="polaroid-caption">Together, always 💛</div>
+            </div>
+            <div class="polaroid" style="--rot:1.8deg">
+                <div class="polaroid-img">
+                    <img src="picture/photo_7_2026-05-15_16-32-19.jpg" alt="Her smile, my strength">
+                </div>
+                <div class="polaroid-caption">Her smile, my strength ❤️</div>
+            </div>
+            <div class="polaroid" style="--rot:-1.2deg">
+                <div class="polaroid-img">
+                    <img src="picture/photo_8_2026-05-15_16-32-19.jpg" alt="Home is where Maa is">
+                </div>
+                <div class="polaroid-caption">Home is where Maa is 🏠</div>
+            </div>
+            <div class="polaroid" style="--rot:2.3deg">
+                <div class="polaroid-img">
+                    <img src="picture/photo_9_2026-05-15_16-32-19.jpg" alt="A thousand little moments">
+                </div>
+                <div class="polaroid-caption">A thousand little moments 🌸</div>
+            </div>
+            <div class="polaroid" style="--rot:-1.8deg">
+                <div class="polaroid-img">
+                    <img src="picture/photo_10_2026-05-15_16-32-19.jpg" alt="Festival mornings">
+                </div>
+                <div class="polaroid-caption">Festival mornings 🪔</div>
+            </div>
+            <div class="polaroid" style="--rot:1.2deg">
+                <div class="polaroid-img">
+                    <img src="picture/photo_11_2026-05-15_16-32-19.jpg" alt="My favourite chef">
+                </div>
+                <div class="polaroid-caption">My favourite chef 🍛</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════
+       SECTION 6 — COUNTERS
+  ════════════════════════════════ -->
+    <section id="counters">
+        <div class="section-header">
+            <span class="section-label">By the Numbers</span>
+            <h2 class="section-title">What You Mean to Me</h2>
+        </div>
+        <div class="counters-grid">
+            <div class="counter-card">
+                <div class="counter-emoji">♾️</div>
+                <div class="counter-value">∞</div>
+                <div class="counter-label">Infinite Love</div>
+            </div>
+            <div class="counter-card">
+                <div class="counter-emoji">🙏</div>
+                <div class="counter-value" data-count="1000">0</div>
+                <div class="counter-label">Sacrifices Made</div>
+            </div>
+            <div class="counter-card">
+                <div class="counter-emoji">🌅</div>
+                <div class="counter-value">365</div>
+                <div class="counter-label">Days of Support / Year</div>
+            </div>
+            <div class="counter-card">
+                <div class="counter-emoji">🤍</div>
+                <div class="counter-value">0</div>
+                <div class="counter-label">Days Without Caring</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════
+       SECTION 7 — ENDING
+  ════════════════════════════════ -->
+    <section id="ending">
+        <canvas id="stars-canvas"></canvas>
+        <div class="ending-content">
+            <p class="ending-line" id="e1">"No matter how far Mumbai is from Bhilwara…"</p>
+            <div class="ending-divider" id="ed1"></div>
+            <p class="ending-line" id="e2">"You'll always be my home."</p>
+            <div class="ending-divider" id="ed2"></div>
+            <h2 class="ending-title" id="e3">Happy Birthday Maa ❤️</h2>
+
+            <button class="call-btn" id="call-btn" onclick="callMom()">
+                <div class="call-btn-inner">📞 Call Mom</div>
+                <div class="call-btn-hint">Tap to open your phone dialer</div>
+            </button>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
