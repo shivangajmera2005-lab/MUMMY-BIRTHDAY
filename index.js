@@ -251,14 +251,23 @@ function initStarsCanvas() {
 }
 
 // ════════════════════════════════
-// CALL MOM — Confetti + Dialer
+// GIFT BOX OPENING
 // ════════════════════════════════
-function callMom() {
+function openGift() {
     launchConfetti();
-    spawnHearts(document.getElementById('call-btn'));
+    const btn = document.getElementById('gift-btn');
+    
+    // Spawn many hearts over a short period
+    let count = 0;
+    const interval = setInterval(() => {
+        spawnHearts(btn);
+        count++;
+        if (count > 10) clearInterval(interval);
+    }, 150);
+
     setTimeout(() => {
-        window.location.href = `tel:${MOM_PHONE}`;
-    }, 800);
+        window.location.href = 'https://drive.google.com/file/d/12RXR2Dz08aYXCu-KqyLsx5cAm8cQtTQF/view?usp=sharing'; 
+    }, 2500);
 }
 
 function launchConfetti() {
@@ -359,7 +368,7 @@ function triggerEndingSequence() {
         { id: 'e2', delay: 1000 },
         { id: 'ed2', delay: 1400 },
         { id: 'e3', delay: 1800 },
-        { id: 'call-btn', delay: 2400 },
+        { id: 'gift-btn', delay: 2400 },
     ];
 
     sequence.forEach(({ id, delay }) => {
